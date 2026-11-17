@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FPH Corp — Développement indépendant de jeux vidéo et d'applications mobiles. Découvrez Idle Micro Factory sur Android.">
+    <title>FPH Corp — Studio Indépendant &amp; Jeux Mobiles</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 820px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 2.5rem 1rem 3rem 1rem;
+        }
+
+        .brand-logo {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background-color: #eff6ff;
+            padding: 0.35rem 0.9rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border: 1px solid #dbeafe;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #111827;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.6rem;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.25rem 2.5rem;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            margin-bottom: 2rem;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .status-badge {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #047857;
+            background-color: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+        }
+
+        .project-description {
+            font-size: 0.98rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .tag {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            background-color: #f9fafb;
+            border: 1px solid var(--border-color);
+            padding: 0.25rem 0.65rem;
+            border-radius: 5px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--accent);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.75rem 1.35rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.15s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f9fafb;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.72rem 1.15rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.15s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f3f4f6;
+        }
+
+        footer {
+            max-width: 820px;
+            width: 100%;
+            margin: 2rem auto 0 auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 1.5rem 0.5rem 2rem 0.5rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .project-card {
+                padding: 1.5rem 1.25rem;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="brand-logo">FPH Corp</div>
+            <h1>Création de jeux &amp; expériences mobiles</h1>
+            <p class="subtitle">Développement indépendant axé sur la simulation industrielle, la gestion et les mécaniques incrémentales.</p>
+        </header>
+
+        <main>
+            <article class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">Idle Micro Factory</h2>
+                    <span class="status-badge">Android • Google Play</span>
+                </div>
+
+                <p class="project-description">
+                    Construisez, optimisez et automatisez votre propre complexe industriel. Gérez vos lignes d'assemblage, débloquez des technologies en R&amp;D, honorez des contrats B2B et faites tourner votre production même hors ligne.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Simulation industrielle</span>
+                    <span class="tag">Idle / Tycoon</span>
+                    <span class="tag">Progression hors-ligne</span>
+                    <span class="tag">PEGI 3</span>
+                </div>
+
+                <div class="actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.idlemicrofactory.game" class="btn-primary" target="_blank" rel="noopener">
+                        Télécharger sur Google Play
+                    </a>
+                    <a href="https://play.google.com/apps/testing/com.idlemicrofactory.game" class="btn-secondary" target="_blank" rel="noopener">
+                        Rejoindre le test bêta
+                    </a>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <div>&copy; 2026 FPH Corp — Charles Berthault</div>
+        <nav class="footer-links">
+            <a href="/cgu.html">Conditions d'utilisation</a>
+            <a href="/privacy.html">Politique de confidentialité</a>
+            <a href="mailto:mrsqarvc@gmail.com">Contact</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
